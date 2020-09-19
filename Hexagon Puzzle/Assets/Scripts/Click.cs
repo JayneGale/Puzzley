@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Click : MonoBehaviour
 {
-    int swapTri;
-    int changeFactor = 0;
+ //   int swapTri;
+ //   int changeFactor = 0;
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -14,17 +14,18 @@ public class Click : MonoBehaviour
             RaycastHit hitInfo;
             if (Physics.Raycast(rayOrigin, out hitInfo))
             {
-                IActivatable<int> obj = hitInfo.collider.GetComponent<IActivatable<int>>();
+                IActivatable obj = hitInfo.collider.GetComponent<IActivatable>();
                 if (obj != null)
                 {
-//					Player player = hitInfo.collider.GetComponent<Player>();
-//					if (player == null || player.IsDead() == false) // if its not an IDamagable, or if its a destroyed enemy,  or if the player is NOT dead
+                    //					Player player = hitInfo.collider.GetComponent<Player>();
+                    //					if (player == null || player.IsDead() == false) // if its not an IDamagable, or if its a destroyed enemy,  or if the player is NOT dead
                     {
-                        obj.Activate(swapTri, changeFactor);
+                        obj.Activate();
                     }
                 }
             }
         }
+    }
 }
 
 
