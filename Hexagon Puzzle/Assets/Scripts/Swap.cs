@@ -11,9 +11,9 @@ public class Swap : MonoBehaviour, IActivatable
         Vector3 startPos = transform.position;
         Vector3 endPos = swapTarget.transform.position;
         transform.position = endPos;
-        transform.Rotate(0, 180, 0);
+//        transform.Rotate(0, 180, 0);
         swapTarget.transform.position = startPos;
-        swapTarget.transform.Rotate(0, 180, 0);
+//        swapTarget.transform.Rotate(0, 180, 0);
 
     }
 }
