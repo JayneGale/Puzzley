@@ -17,8 +17,10 @@ public class Click : MonoBehaviour
             {
                 IActivatable obj = hitInfo.collider.GetComponent<IActivatable>();
 
-                if (obj != null && isSelected == false)
-                    isSelected = true;
+                if (obj != null)
+//                    if (obj != null && isSelected == false)
+
+//                        isSelected = true;
                 {
                     //					Player player = hitInfo.collider.GetComponent<Player>();
                     //					if (player == null || player.IsDead() == false) // if its not an IDamagable, or if its a destroyed enemy,  or if the player is NOT dead
